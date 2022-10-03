@@ -1,5 +1,5 @@
 {
-  description = "DendrETH";
+  description = "CosmWasm Playground";
 
   # Opt into `nix-blockchain-development`'s substituter (binary cache).
   # `nixConfig` settings are not transitive so every user of a flake with a
@@ -20,6 +20,12 @@
     mcl-blockchain.url = "github:metacraft-labs/nix-blockchain-development";
     nixpkgs.follows = "mcl-blockchain/nixpkgs";
     flake-utils.follows = "mcl-blockchain/flake-utils";
+
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
   };
 
   outputs = {
@@ -27,11 +33,12 @@
     nixpkgs,
     flake-utils,
     mcl-blockchain,
+    rust-overlay,
   }:
     flake-utils.lib.simpleFlake {
       inherit self nixpkgs;
       name = "cosmos-playground";
       shell = ./shell.nix;
-      preOverlays = [mcl-blockchain.overlays.default];
+      preOverlays = [mcl-blockchain.overlays.default rust-overlay.overlays.default];
     };
 }
