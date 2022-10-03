@@ -1,0 +1,5 @@
+.tmp/
+
+# Cached profile files created by direnv
+.direnv/*
+!.direnv/.gitkeep
