@@ -2,11 +2,10 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  buildWasmd,
+  buildGoModule,
   fetchurl,
 }:
-with
-  buildWasmd rec {
+  buildGoModule rec {
     pname = "wasmd";
     version = "1.0.0";
 
@@ -20,7 +19,7 @@ with
     preCheck = ''
       export HOME=$TMPDIR
     '';
-    vendorSha256 = "sha256-fGRLYkxZDowkuHcX26aRclLind0PRKkC64CQBVrnBr8=";
+    vendorSha256 = "sha256-NgneotrMk0tPEIvPGyaJ+eD30SAOWVHNNcYnfOEiuvk=";
     doCheck = false;
     meta = with lib; {
       description = "Basic cosmos-sdk app with web assembly smart contracts";

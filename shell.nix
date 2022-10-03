@@ -6,7 +6,7 @@
       targets = ["wasm32-unknown-unknown"];
     };
 
-  wasmd = pkgs.callPackage ./nix/wasmd;
+  wasmd = pkgs.callPackage ./nix/wasmd {};
 in
   pkgs.mkShell {
     packages = [
