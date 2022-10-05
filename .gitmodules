@@ -1,0 +1,3 @@
+[submodule "cw-contracts"]
+	path = cw-contracts
+	url = https://github.com/InterWasm/cw-contracts
