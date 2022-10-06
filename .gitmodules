@@ -1,3 +1,6 @@
 [submodule "cw-contracts"]
 	path = cw-contracts
 	url = https://github.com/InterWasm/cw-contracts
+[submodule "cosmwasm"]
+	path = cosmwasm
+	url = git@github.com:CosmWasm/cosmwasm.git
