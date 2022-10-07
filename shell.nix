@@ -12,8 +12,8 @@ in
     packages = [
       pkgs.metacraft-labs.cosmos-theta-testnet # <after>
       rustTargetWasm
+      pkgs.rustup
       pkgs.go
-
       wasmd
 
       pkgs.jq
