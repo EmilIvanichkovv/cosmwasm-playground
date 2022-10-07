@@ -3,3 +3,21 @@
 # Cached profile files created by direnv
 .direnv/*
 !.direnv/.gitkeep
+
+# Text file backups
+**/*.rs.bk
+
+# Build results
+target/
+artifacts/
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Auto-gen
+.cargo-ok
+
+# Log files (e.g. memory profiling)
+*.log

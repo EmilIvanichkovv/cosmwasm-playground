@@ -1,0 +1,15 @@
+[package]
+name = "cosmwasm-playground"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cw-nameservice = { path = "cw-contracts/contracts/nameservice" }
+cw20-pot = { path = "cw-contracts/contracts/cw20-pot" }
+cw-quadratic-funding = { path = "cw-contracts/contracts/cw-quadratic-funding" }
+cw-to-do-list = { path = "cw-contracts/contracts/cw-to-do-list" }
+cw-escrow = { path = "cw-contracts/contracts/escrow" }
+simple-option = { path = "cw-contracts/contracts/simple-option" }
+cw-voting = { path = "cw-contracts/contracts/voting" }
