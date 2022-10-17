@@ -3,12 +3,11 @@
   stdenv,
   fetchFromGitHub,
   buildGoModule,
-  fetchurl,
   autoPatchelfHook,
 }:
 buildGoModule rec {
   pname = "wasmd";
-  version = "1.0.0";
+  version = "0.14.99";
 
   src = fetchFromGitHub {
     owner = "CosmWasm";
@@ -37,7 +36,7 @@ buildGoModule rec {
   meta = with lib; {
     description = "Basic cosmos-sdk app with web assembly smart contracts";
     homepage = "https://github.com/CosmWasm/wasmd";
-    license = licenses.mit;
+    license = licenses.asl20;
     maintainers = with maintainers; [];
   };
 }
