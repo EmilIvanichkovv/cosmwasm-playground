@@ -37,6 +37,8 @@ in
       pkgs.binaryen
 
       emscripten-enriched-cache
+
+      pkgs.cargo-generate
     ];
     shellHook = ''
       export GAIAD_BOOSTTRAP_DATA_DIR=${pkgs.metacraft-labs.cosmos-theta-testnet}/data
