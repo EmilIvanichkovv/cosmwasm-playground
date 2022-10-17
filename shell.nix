@@ -6,7 +6,6 @@
       targets = ["wasm32-unknown-unknown"];
     };
 
-  wasmd = pkgs.callPackage ./nix/wasmd {};
   emscripten-enriched-cache = pkgs.emscripten.overrideAttrs (old: {
     postInstall = ''
       pushd $TMPDIR
@@ -31,7 +30,7 @@ in
       rustTargetWasm
       pkgs.rustup
       pkgs.go
-      wasmd
+      pkgs.metacraft-labs.wasmd
 
       pkgs.jq
 
